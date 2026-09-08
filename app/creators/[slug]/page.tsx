@@ -31,7 +31,7 @@ export default function CreatorPage({ params }: { params: Promise<{ slug: string
             bio={creator.bio}
             styleTags={creator.styleTags}
             sampleWork={creator.sampleWork}
-            shareUrl={`https://signal.app/creators/${creator.slug}`}
+            shareUrl={`https://signal-five-hazel.vercel.app/creators/${creator.slug}`}
           />
         </motion.div>
 
