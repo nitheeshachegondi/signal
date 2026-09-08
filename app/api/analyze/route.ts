@@ -10,7 +10,7 @@ const SYSTEM_PROMPT = `You are a marketing visibility analyst. Given a brand's w
 
 If a "Live page data" block is provided below, treat it as ground truth about the current page and reference it directly. If it says the page could not be fetched, fall back to reasoning from the URL/category/notes and say so plainly instead of inventing page content.
 
-Respond ONLY as JSON with this shape:
+Respond ONLY as JSON with this shape. Each value must be a single flat string or array of flat strings/objects as shown — never put a colon-separated key or a quotation mark inside a string value:
 {
   "competitors": [{"name": string, "why": string}],
   "search_snapshot": string,
