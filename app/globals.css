@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #fbf8f2;
+  --cream-soft: #f3ede0;
+  --ink: #1c1a2e;
+  --coral: #ff5f5f;
+  --violet: #7b5fff;
+  --sun: #ffc145;
+  --mint: #2fd9a6;
+  --line: #e8e1d0;
+}
+
+html,
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family:
+    var(--font-inter), "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-anton), "Arial Black", "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.font-mono {
+  font-family:
+    var(--font-jbmono), "Consolas", "SFMono-Regular", Menlo, monospace;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(20px, -30px) rotate(8deg);
+  }
+}
+@keyframes float-slower {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-25px, 25px) rotate(-6deg);
+  }
+}
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse-scale {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+.float-slower {
+  animation: float-slower 9s ease-in-out infinite;
+}
+.spin-slow {
+  animation: spin-slow 18s linear infinite;
+}
+.pulse-scale {
+  animation: pulse-scale 4s ease-in-out infinite;
+}
+
+/* Dark "agency" theme tokens — used on the landing page only */
+:root {
+  --noir: #0b0a0c;
+  --noir-soft: #16151a;
+  --paper2: #f3ede3;
+  --ember: #ff5a36;
+  --amber: #e8b34a;
+  --steel2: #8b8890;
+  --hairline: rgba(243, 237, 227, 0.14);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 22s linear infinite;
+  width: max-content;
+}
